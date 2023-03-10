@@ -1,0 +1,9 @@
+main: net.michal.diamondcrafting.WiksaDiamondCrafting
+version: 1.0
+name: wiksa-diamondCrafting
+description: basic diamond items crafting blocker
+commands:
+  d-crafting:
+    permission: diamondcrafting.command
+    aliases: d-craft
+    description: main command of plugin
