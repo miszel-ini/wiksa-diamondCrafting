@@ -1,14 +1,16 @@
 package net.michal.diamondcrafting.manager;
 
+import net.michal.diamondcrafting.WiksaDiamondCrafting;
+
 public class DiamondCraftingManager {
 
-    static boolean status;
+    static WiksaDiamondCrafting instance = WiksaDiamondCrafting.getInstance();
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public static void setStatus(boolean status) {
+        instance.getConfig().set("status", status);
     }
 
-    public boolean getStatus() {
-        return status;
+    public static boolean isStatus() {
+        return instance.getConfig().getBoolean("status");
     }
 }

@@ -16,7 +16,7 @@ public class WiksaDiamondCrafting extends JavaPlugin {
         saveDefaultConfig();
         reloadConfig();
 
-        getCommand("d-crafting").setExecutor(new DiamondCraftingCommand());
+        getCommand("dcrafting").setExecutor(new DiamondCraftingCommand());
         getServer().getPluginManager().registerEvents(new DiamondCraftingListener(), this);
     }
 
