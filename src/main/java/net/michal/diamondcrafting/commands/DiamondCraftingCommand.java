@@ -1,5 +1,7 @@
 package net.michal.diamondcrafting.commands;
 
+import net.michal.diamondcrafting.WiksaDiamondCrafting;
+import net.michal.diamondcrafting.helpers.ChatHelper;
 import net.michal.diamondcrafting.menu.DiamondCraftingInventory;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -7,6 +9,8 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class DiamondCraftingCommand implements CommandExecutor {
+
+    WiksaDiamondCrafting instance = WiksaDiamondCrafting.getInstance();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
@@ -21,7 +25,7 @@ public class DiamondCraftingCommand implements CommandExecutor {
                 }
             }
         } else {
-            //todo: send message if player hasnt permission of command
+            ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.player-no-permission"));
         }
 
         return false;
