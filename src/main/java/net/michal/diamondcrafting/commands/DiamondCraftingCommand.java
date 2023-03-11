@@ -22,7 +22,14 @@ public class DiamondCraftingCommand implements CommandExecutor {
                     case "manage":
                         DiamondCraftingInventory.showDiamondCraftingInventory(player);
                         break;
+
+                    case "reload":
+                        instance.reloadConfig();
+                        ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.reload-config"));
+                        break;
                 }
+            } else {
+                ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.correct-usage"));
             }
         } else {
             ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.player-no-permission"));
