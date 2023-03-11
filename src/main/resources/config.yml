@@ -1,17 +1,52 @@
 messages:
+  # gdy gracz nie ma permisji
   player-no-permission: '&4&lBLAD &8>> &cNie posiadasz permisji do uzycia tej komendy!'
+
+  # gdy craftowanie diamentowych itemow jest wylaczone
   cannot-crafting: '&4&lBLAD &8>> &cAktualnie jest wylaczone craftowanie diamentowych przedmiotow!'
+
+  # gdy wlaczysz craftowanie diamentowych itemow
   enable-crafting: '&a&lSUKCES &8>> &7Craftowanie diamentowych itemow zostalo &awlaczone'
+
+  # gdy wylaczysz craftowanie diamentowych itemow
   disable-crafting: '&a&lSUKCES &8>> &7Craftowanie diamentowych itemow zostalo &cwylaczone'
+
+  # gdy przeladujesz plik konfiguracyjny
+  reload-config: '&a&lSUKCES &8>> &7Przeladowano pomyslnie plik konfiguracyjny'
+
+  # gdy uzyjesz zlej skladnii
+  correct-usage: '&9&lCRAFT &8>> &7Poprawne uzycie: &9/dcraft <manage/reload>'
+
+# konfiguracja gui /dcraft manage
 inventory:
+  #nazwa inventory
   name: '&9&lCRAFTOWANIE DIAX ITEMOW'
+  # rozmiar inventory (0-53)
   size: 9
 
+  # item, ktory odpowiada za wlaczenie craftowania
   on-craft:
+    #material - nazwa itemu
     material: WOOL
+    # name - nazwa w GUI
     name: '&a&lWLACZ CRAFTOWANIE'
+    #slot - slot w GUI
     slot: 3
+    #data - alias ID, do koloru
+    data: 5
+
+  # item, ktory odpowiada za wylaczenie craftowania
   off-craft:
+    # material - nazwa itemu
     material: WOOL
+    # name - nazwa w GUI
     name: '&4&lWYLACZ CRAFTOWANIE'
+    # slot - slot w GUI
     slot: 5
+    # data - alias ID, do koloru
+    data: 14
+
+# Ustawianie statusu
+# true - mozna craftowac diamentowe itemy
+# false - nie mozna craftowac diamentowych itemow
+status: false
