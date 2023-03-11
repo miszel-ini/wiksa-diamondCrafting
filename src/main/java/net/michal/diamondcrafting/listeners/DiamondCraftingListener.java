@@ -14,23 +14,21 @@ public class DiamondCraftingListener implements Listener {
 
     WiksaDiamondCrafting instance = WiksaDiamondCrafting.getInstance();
 
-    DiamondCraftingManager manager;
 
     @EventHandler
     public void onPlayerCraft(CraftItemEvent event) {
         Player player = (Player) event.getWhoClicked();
-        if(manager.getStatus() == false) {
-            if (event.getRecipe().getResult().getType().toString().startsWith("DIAMOND_")) {
+
+        if (event.getRecipe().getResult().getType().toString().startsWith("DIAMOND_")) {
+            if (!DiamondCraftingManager.isStatus()) {
                 event.setCancelled(true);
                 player.closeInventory();
                 ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.cannot-crafting"));
-            } else {
-                event.setCancelled(false);
             }
-        } else {
-            event.setCancelled(false);
         }
     }
+
+
 
     @EventHandler
     public void onClick(InventoryClickEvent event) {
@@ -39,18 +37,16 @@ public class DiamondCraftingListener implements Listener {
         if(event.getInventory().getName().equalsIgnoreCase(ChatHelper.fixChatColor(instance.getConfig().getString("inventory.name")))) {
              event.setCancelled(true);
 
-            if(event.getCurrentItem().equals(Material.matchMaterial(instance.getConfig().getString("inventory.on-craft.material")))) {
-                //todo: manager set to enable crafting diamond items
-                if(manager.getStatus() == false) {
-                    manager.setStatus(true);
-                    ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.enable-crafting"));
-                }
-            } else if(event.getCurrentItem().equals(Material.matchMaterial(instance.getConfig().getString("inventory.off-craft.material")))) {
-                //todo: manager set to disable crafting diamond items
-                if(manager.getStatus() == true) {
-                    manager.setStatus(false);
-                    ChatHelper.sendChatMessage(player, instance.getConfig().getString("messages.disable-crafting"));
-                }
+            if(event.getRawSlot() == instance.getConfig().getInt("inventory.on-craft.slot")) {
+
+                DiamondCraftingManager.setStatus(true);
+                ChatHelper.sendChatMessage(player, instance.getConfig().getString("message.enable-crafting"));
+
+            } else if (event.getRawSlot() == instance.getConfig().getInt("inventory.off-craft.slot")) {
+
+                DiamondCraftingManager.setStatus(false);
+                ChatHelper.sendChatMessage(player, instance.getConfig().getString("message.disable-crafting"));
+
             }
         }
     }
