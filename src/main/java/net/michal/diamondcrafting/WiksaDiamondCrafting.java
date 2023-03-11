@@ -2,7 +2,6 @@ package net.michal.diamondcrafting;
 
 import net.michal.diamondcrafting.commands.DiamondCraftingCommand;
 import net.michal.diamondcrafting.listeners.DiamondCraftingListener;
-import net.michal.diamondcrafting.menu.DiamondCraftingInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class WiksaDiamondCrafting extends JavaPlugin {
