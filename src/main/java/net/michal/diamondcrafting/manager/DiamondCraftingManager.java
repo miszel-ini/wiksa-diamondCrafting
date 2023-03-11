@@ -8,6 +8,7 @@ public class DiamondCraftingManager {
 
     public static void setStatus(boolean status) {
         instance.getConfig().set("status", status);
+        instance.saveConfig();
     }
 
     public static boolean isStatus() {
