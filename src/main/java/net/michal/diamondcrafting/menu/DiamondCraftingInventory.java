@@ -21,8 +21,8 @@ public class DiamondCraftingInventory implements Listener {
     );
 
     public static InventoryView showDiamondCraftingInventory(Player player) {
-        ItemBuilder on_craft = new ItemBuilder(Material.matchMaterial(instance.getConfig().getString("inventory.on-craft.material")), (short) 14);
-        ItemBuilder off_craft = new ItemBuilder(Material.matchMaterial(instance.getConfig().getString("inventory.off-craft.material")), (short) 12);
+        ItemBuilder on_craft = new ItemBuilder(Material.matchMaterial(instance.getConfig().getString("inventory.on-craft.material")), (short) instance.getConfig().getInt("inventory.on-craft.data"));
+        ItemBuilder off_craft = new ItemBuilder(Material.matchMaterial(instance.getConfig().getString("inventory.off-craft.material")), (short) instance.getConfig().getInt("inventory.off-craft.data"));
 
         on_craft.setTitle(ChatHelper.fixChatColor(instance.getConfig().getString("inventory.on-craft.name")));
         off_craft.setTitle(ChatHelper.fixChatColor(instance.getConfig().getString("inventory.off-craft.name")));
