@@ -1,15 +1,17 @@
 messages:
+  player-no-permission: '&4&lBLAD &8>> &cNie posiadasz permisji do uzycia tej komendy!'
   cannot-crafting: '&4&lBLAD &8>> &cAktualnie jest wylaczone craftowanie diamentowych przedmiotow!'
-
+  enable-crafting: '&a&lSUKCES &8>> &7Craftowanie diamentowych itemow zostalo &awlaczone'
+  disable-crafting: '&a&lSUKCES &8>> &7Craftowanie diamentowych itemow zostalo &cwylaczone'
 inventory:
   name: '&9&lCRAFTOWANIE DIAX ITEMOW'
   size: 9
 
-  on-item:
+  on-craft:
     material: WOOL
     name: '&a&lWLACZ CRAFTOWANIE'
     slot: 3
-  off-item:
+  off-craft:
     material: WOOL
     name: '&4&lWYLACZ CRAFTOWANIE'
-    slot: 4
+    slot: 5
