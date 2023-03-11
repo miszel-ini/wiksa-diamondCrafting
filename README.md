@@ -5,10 +5,11 @@ Plugin, który blokuje craftowanie diamentowych itemów na serwerze.
 # config.yml
 
 W configu do ustawienia sa wiadomosci, gui oraz status
+Aby korzystać z komendy /d-crafting, musisz posiadać permisje `diamondcrafting.command`
 
 Przykladowe linijki configu:
 ```yml
-  messages:
+ messages:
   # gdy gracz nie ma permisji
   player-no-permission: '&4&lBLAD &8>> &cNie posiadasz permisji do uzycia tej komendy!'
 
