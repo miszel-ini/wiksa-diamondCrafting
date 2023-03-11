@@ -1,5 +1,6 @@
 package net.michal.diamondcrafting.commands;
 
+import net.michal.diamondcrafting.menu.DiamondCraftingInventory;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -15,7 +16,7 @@ public class DiamondCraftingCommand implements CommandExecutor {
             if(args.length == 1) {
                 switch(args[0]) {
                     case "manage":
-                        //todo: open inventory with 2 blocks of wool -> 1 green "WLACZ", 2 red "WYLACZ"
+                        DiamondCraftingInventory.showDiamondCraftingInventory(player);
                         break;
                 }
             }

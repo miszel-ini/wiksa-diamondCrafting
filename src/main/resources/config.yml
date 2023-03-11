@@ -1,3 +1,15 @@
 messages:
   cannot-crafting: '&4&lBLAD &8>> &cAktualnie jest wylaczone craftowanie diamentowych przedmiotow!'
 
+inventory:
+  name: '&9&lCRAFTOWANIE DIAX ITEMOW'
+  size: 9
+
+  on-item:
+    material: WOOL
+    name: '&a&lWLACZ CRAFTOWANIE'
+    slot: 3
+  off-item:
+    material: WOOL
+    name: '&4&lWYLACZ CRAFTOWANIE'
+    slot: 4
