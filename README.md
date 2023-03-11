@@ -28,7 +28,7 @@ inventory:
 
 (https://imgur.com/a/xa59AMF)
 
-##Instalacja
+## Instalacja
 1. Pobierasz `wiksa-diamondCrafting.jar`, po pobraniu wrzucasz go do swojego folderu z pluginami na serwerze.
 2. Uruchamiasz serwer, po uruchomieniu stworzy sie plik konfiguracyjny
 3. Edytujesz wszystko w configu pod swoje potrzeby
