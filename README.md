@@ -3,6 +3,7 @@
 Plugin, który blokuje craftowanie diamentowych itemów na serwerze.
 
 ##config.yml
+
 W configu do ustawienia sa wiadomosci, gui oraz status
 
 Przykladowe linijki configu:
